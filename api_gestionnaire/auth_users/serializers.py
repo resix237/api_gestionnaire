@@ -9,19 +9,6 @@ class UserGestionSerializer(serializers.ModelSerializer):
         fields = ('id', 'email', 'first_name', 'last_name', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
-    # def create(self, validated_data):
-    #     username = validated_data["username"]
-    #     email = validated_data["email"]
-    #     password = validated_data["password"]
-    #     if (email and models.UserGestion.objects.filter(email=email).exclude(username=username).exists()):
-    #         raise serializers.ValidationError(
-    #             {"email": "Email addresses must be unique."})
-
-    #     user = models.UserGestion(username=username, email=email)
-    #     user.set_password(password)
-    #     user.save()
-    #     return user
-
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
