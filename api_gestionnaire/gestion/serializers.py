@@ -19,10 +19,10 @@ class CategorieDepenseSerializer(serializers.ModelSerializer):
 class RevenuSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Revenu
-        fields = '__all__'
+        fields = ("id", "montant", "categorie", "date")
 
 
 class DepenseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Depense
-        fields = '__all__'
+        fields = ("id", "montant", "categorie", "date")

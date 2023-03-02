@@ -14,9 +14,11 @@ router.register(r'categorieR', views.CategorieRevenuViewset,
                 basename="categorie R admin")
 router.register(r'revenuAd', views.RevenuViewset, basename="revenu Ad")
 router.register(r'depenseAd', views.DepenseViewset, basename="depense Ad ")
+router.register(r'categorieDlist', views.CategorieDepenseList,
+                basename="depense categorie")
+router.register(r'categorieRlist', views.CategorieRevenuList,
+                basename="revenu categorie")
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('categorieDlist/', views.CategorieDepenseList.as_view()),
-    path('categorieRlist/', views.CategorieRevenuList.as_view()),
 ]

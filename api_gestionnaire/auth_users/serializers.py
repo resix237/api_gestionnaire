@@ -1,6 +1,7 @@
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from . import models
+from django.contrib.auth.hashers import make_password
 
 
 class UserGestionSerializer(serializers.ModelSerializer):
@@ -8,6 +9,9 @@ class UserGestionSerializer(serializers.ModelSerializer):
         model = models.UserGestion
         fields = ('id', 'email', 'first_name', 'last_name', 'password')
         extra_kwargs = {'password': {'write_only': True}}
+
+    def validate_password(self, value: str) -> str:
+        return make_password(value)
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
