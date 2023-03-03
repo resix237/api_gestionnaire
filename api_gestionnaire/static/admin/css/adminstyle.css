@@ -1,0 +1,52 @@
+#header {
+    background: white;
+}
+
+#user-tools strong {
+    font-weight: 400;
+    font-size: 14px;
+    color: #18223d;
+    ;
+}
+
+#user-tools a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #18223d;
+}
+
+#header a:link,
+#header a:visited {
+    color: #18223d;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: left;
+    background: #f3ad3b;
+    color: #18223d;
+}
+
+a.section:link,
+a.section:visited {
+    color: #18223d;
+    text-decoration: none;
+}
+
+div.breadcrumbs {
+    background: #f3ad3b;
+    padding: 10px 40px;
+    border: none;
+    color: #18223d;
+    text-align: left;
+}
+
+div.breadcrumbs a {
+    color: #18223d;
+    font-weight: bolder;
+}
